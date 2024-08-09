@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# ÉèÖÃ GitHub API ·ÃÎÊÁîÅÆ
+# è®¾ç½® GitHub API è®¿é—®ä»¤ç‰Œ
 TOKEN="your_github_token"
 
-# ÉèÖÃÎÄ¼şÂ·¾¶ºÍÎÄ¼şÃû
+# è®¾ç½®æ–‡ä»¶è·¯å¾„å’Œæ–‡ä»¶å
 FILE_PATH="/path/to/your/IPTV.m3u"
 
-# »ñÈ¡Ö±²¥Ô´ĞÅÏ¢
+# è·å–ç›´æ’­æºä¿¡æ¯
 LIVE_STREAMS=$(curl -s https://s.netimed.cn/iptv)
 
-# ½«Ö±²¥Ô´ĞÅÏ¢±£´æµ½ÎÄ¼ş
+# å°†ç›´æ’­æºä¿¡æ¯ä¿å­˜åˆ°æ–‡ä»¶
 echo "$LIVE_STREAMS" > "$FILE_PATH"
 
-# Ìá½»¸ü¸Äµ½ GitHub
+# æäº¤æ›´æ”¹åˆ° GitHub
 curl -X PUT \
   -H "Authorization: token $TOKEN" \
   -H "Content-Type: application/octet-stream" \
